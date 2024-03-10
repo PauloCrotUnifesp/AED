@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int maxValue (int n, int vetor[]){
+if (n==1) 
+  return vetor[0];
+ else {
+
+   int x = maxValue(n - 1, vetor);
+   if (x < vetor[n-1])
+ return vetor[n - 1];
+      else
+  return x;
+
+  }
+}
+
+
+ 
+
+int main(void) {
+int n;
+  printf("Quantos numeros serao colocados no vetor? \n");
+  scanf("%d", &n);
+  int vetor[n];
+
+  for (int i = 0; i < n; i++) {
+printf("Digite o numero do numero [%d]\n", i+1);
+scanf("%d", &vetor[i]);
+
+
+  }
+printf("Elementos do vetor: \n");
+for (int i = 0; i < n; i++) {
+
+  printf("%d ", vetor[i]);
+}  
+  printf("\n");
+
+  int max = maxValue(n, vetor);
+  printf("O maior valor no vetor: %d\n", max);
+
+  return 0;
+}

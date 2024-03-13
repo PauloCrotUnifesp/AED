@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+
+  int n, aux, i;
+i = 1;
+
+  while (scanf("%d", &n) != EOF)
+  {
+if (n == 0)break;
+
+    else
+{
+aux = pow(2,n)-1;
+printf("Teste %d\n%d\n\n", i, aux);
+
+  i++;
+
+}
+}
+  return 0;
+}
